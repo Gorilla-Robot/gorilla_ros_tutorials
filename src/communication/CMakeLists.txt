@@ -25,9 +25,13 @@ ament_target_dependencies(communication ${dependencies})
 add_executable(hello_world_publisher_tutorial tutorials/topic/hello_world_publisher_tutorial.cc)
 ament_target_dependencies(hello_world_publisher_tutorial ${dependencies})
 
+add_executable(hello_world_subscriber_tutorial tutorials/topic/hello_world_subscriber_tutorial.cc)
+ament_target_dependencies(hello_world_subscriber_tutorial ${dependencies})
+
 install(TARGETS 
   communication
   hello_world_publisher_tutorial
+  hello_world_subscriber_tutorial
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
